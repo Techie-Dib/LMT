@@ -50,7 +50,7 @@ public class UserData implements Build.Account {
             String query = String.format("insert into USER_DATA values(1,'%s','%s','%s','%s',%d,%d)",Fname,Lname,email,pass,num,ID);
             Class.forName("oracle.jdbc.driver.OracleDriver");
             /*"*" is used as an account safety measure for admin account*/
-            Connection con = DriverManager.getConnection(url,"Techie","2357");
+            Connection con = DriverManager.getConnection(url,"Techie","****");
             /*Executing the SQL query*/
             Statement st = con.createStatement();
             ResultSet rs = null;
@@ -107,7 +107,7 @@ public class UserData implements Build.Account {
         String pass = scan1.nextLine();
         try{
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con = DriverManager.getConnection(url,"Techie","2357");
+            Connection con = DriverManager.getConnection(url,"Techie","****");
             Statement st = con.createStatement();
             ResultSet rs = null;
             if(pass.length() >= 8 && email.contains("@")) {
@@ -172,14 +172,14 @@ public class UserData implements Build.Account {
         try {
             String temp_query = "select concat(Firstname,Lastname) from Employees";
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con = DriverManager.getConnection(url, "Techie", "2357");
+            Connection con = DriverManager.getConnection(url, "Techie", "****");
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(temp_query);
             //Checks for all the usernames in the USER_DATA table
             while (rs.next()) {
                 if (rs.getString(1).equalsIgnoreCase(username)) {
                     Class.forName("oracle.jdbc.driver.OracleDriver");
-                    Connection con2 = DriverManager.getConnection(url, "Techie", "2357");
+                    Connection con2 = DriverManager.getConnection(url, "Techie", "****");
                     Statement st2 = con.createStatement();
                     ResultSet rs2 = st.executeQuery(query);
                     Thread.sleep(1000);
@@ -217,13 +217,13 @@ public class UserData implements Build.Account {
         try {
             String temp_query = "select concat(Firstname,Lastname) from Employees";
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con = DriverManager.getConnection(url,"Techie","2357");
+            Connection con = DriverManager.getConnection(url,"Techie","****");
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(temp_query);
             while(rs.next()) {
                 if(rs.getString(1).equalsIgnoreCase(name)) {
                     Class.forName("oracle.jdbc.driver.OracleDriver");
-                    Connection con2 = DriverManager.getConnection(url,"Techie","2357");
+                    Connection con2 = DriverManager.getConnection(url,"Techie","****");
                     Statement st2 = con.createStatement();
                     ResultSet rs2 = st.executeQuery(query);
                     Thread.sleep(1000);
