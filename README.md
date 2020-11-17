@@ -10,9 +10,9 @@ of sites like *Amazon*.
 # Prequisites
 ```
 -jdk above 7
--maven(Junit framework)
--jdbc driver with an SQL DB
--some google APIs
+-maven(JUnit framework(Jupiter API))
+-jdbc driver with a SQL DB
+-some google API keys
 ```
 
 
