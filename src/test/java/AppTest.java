@@ -1,13 +1,14 @@
 import org.junit.jupiter.*;
 
 public class AppTest {
+        App app_test = null; //Initializes first for the null value
 	@BeforeAll
 	void setUp() {
 		/**
 		* Instantiating a simple object of the {@code App}
 		* and destroying it afterwards
 		*/
-		App app_test = new App();
+		app_test = new App();
 	}
 	@DisplayName("Test Mode")
 	@Test 
