@@ -1,7 +1,7 @@
 # Default ignored files
 /shelf/
-#Other files such as the .class bytecodes and .logs part of the repo
 /workspace.xml
+# Other files such as the .class bytecodes and .log part of the repo
 *.sql
 .env
 *.txt
